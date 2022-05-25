@@ -12,8 +12,7 @@ const Works = () => {
     <div className="works">
       <div>
         <Content
-          text1="Hy! I Am"
-          text2="Yasaman Gandomkar"
+          text1="My skills"
           text3="     Frontend Developer with high level of experience in web designing and
        "
           text4=" development, producting the Quality work"

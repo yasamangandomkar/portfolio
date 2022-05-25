@@ -8,7 +8,6 @@ const Navbar = () => {
     { name: "Services", to: "services" },
     { name: "Experince", to: "experience" },
     { name: "Portfolio", to: "portfolio" },
-    { name: "Testimonial", to: "testimonial" },
   ];
   return (
     <nav>
@@ -32,7 +31,9 @@ const Navbar = () => {
               </li>
             </Link>
           ))}
-          <button className="contact">contact</button>
+          <Link to="contact" activeClass="activeClass" smooth={true}>
+            <button className="contact">contact</button>
+          </Link>
         </ul>
       </div>
     </nav>

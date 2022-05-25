@@ -27,7 +27,7 @@ const Portfolio = () => {
             slidesPerView: 1,
           },
           300: {
-            width: 400,
+            width: 300,
             slidesPerView: 1,
           },
           // when window width is >= 768px

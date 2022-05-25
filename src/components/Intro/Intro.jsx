@@ -6,7 +6,6 @@ import crown from "../../assets/image/crown.png";
 import glassesimoji from "../../assets/image/glasses.png";
 import boy from "../../assets/image/boy.png";
 import GitHub from "../../assets/image/github.png";
-import LinkedIn from "../../assets/image/linkedin.png";
 import Instagram from "../../assets/image/instagram.png";
 import { motion } from "framer-motion";
 import FloatingDiv from "../FloatingDiv/FloatingDiv";
@@ -34,9 +33,12 @@ const Intro = () => {
           </button>
         </div>
         <div className="i-icons">
-          <img src={GitHub} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://github.com/yasamangandomkar">
+            <img src={GitHub} alt="" />
+          </a>
+          <a href="https://instagram.com/yasaman__gk">
+            <img src={Instagram} alt="" />
+          </a>
         </div>
       </div>
       <div className="i-right">

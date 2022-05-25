@@ -7,8 +7,10 @@ import Works from "./components/Works/Works";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import "./App.css";
+
 import Footer from "./components/Footer/Footer";
 import { themeContext } from "./components/Context";
+
 const App = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;

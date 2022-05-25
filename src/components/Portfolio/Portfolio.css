@@ -22,8 +22,9 @@
 .portfolio .swiper {
   overflow: visible !important;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  text-align: center;
 }
 
 .portfolio-slider {
@@ -66,7 +67,13 @@
 }
 
 @media screen and (max-width: 500px) {
+  .portfolio img {
+    width: 14rem;
+  }
   .portfolio {
     height: 50vh;
+  }
+  .overlay::before {
+    display: none;
   }
 }

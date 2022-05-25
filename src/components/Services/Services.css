@@ -32,13 +32,15 @@
   left: -18rem;
 }
 @media screen and (max-width: 480px) {
+  .awesome {
+    margin-top: 5rem;
+  }
   .services {
     display: flex;
     flex-direction: column;
     height: 66rem;
     padding: 0;
-    margin-top: 20rem;
-    /* background-color: red; */
+    margin-top: 30rem;
   }
 
   .cards {

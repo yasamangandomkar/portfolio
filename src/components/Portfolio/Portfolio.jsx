@@ -4,13 +4,54 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Restauran from "../../assets/image/restauran.png";
+import Random from "../../assets/image/random.png";
 import Shop from "../../assets/image/Shop.png";
-import Dolla from "../../assets/image/Dolla.png";
+import vr from "../../assets/image/vr.png";
 import Gym from "../../assets/image/gym2.png";
-import Game from "../../assets/image/Game.png";
+import food from "../../assets/image/portfolio5.png";
 import { themeContext } from "../Context";
 import "./Portfolio.css";
 const Portfolio = () => {
+  const data = [
+    {
+      img: Restauran,
+      url: "https://yasamangandomkar.github.io/restauran",
+      title:
+        "Implement by HTML ,CSS ,react js.This project has been implemented in a responsive design. you can see live in this link",
+    },
+    {
+      img: Random,
+      url: "https://yasamangandomkar.github.io/random-user",
+      title:
+        "Implement by HTML ,CSS ,react js.This project has been implemented in a responsive design. you can see live in this link",
+    },
+    {
+      img: Shop,
+      url: "https://yasamangandomkar.github.io/shop",
+      title:
+        "This app is like a simple online shopping cart which you can add and remove item.implement by HTML ,CSS,react js.in this project I used redux for state management.you can see live in this link",
+    },
+
+    {
+      img: Gym,
+      url: "https://yasamangandomkar.github.io/gym",
+      title:
+        "please turn on vpn for visit this website . Implement by HTML,CSS , fetch api , rapid api react js.This project has been implemented in a responsive design.in this project I used rapid api .",
+    },
+    {
+      img: vr,
+      url: "https://yasamangandomkar.github.io/vr",
+      title:
+        "in this project i used react ,aos for animation, tailwindcss for design .",
+    },
+
+    {
+      img: food,
+      url: "https://yasamangandomkar.github.io/food",
+      title: "in this project I used redux-toolkit for state management",
+    },
+  ];
+
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
@@ -44,80 +85,16 @@ const Portfolio = () => {
         pagination={{ clickable: true }}
         className="portfolio-slider"
       >
-        <SwiperSlide className="slide">
-          <a
-            className="overlay"
-            href="https:///geektor.ir/snake_game"
-            target="_blank"
-          >
-            <img src={Game} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https:///geektor.ir/rwsy"
-            target="_blank"
-            className="overlay"
-          >
-            <img src={Dolla} alt="" />
-            <div className="detail">
-              <p>
-                This app is a project about single page application in react.
-                This project has been . implemented in a responsive design.you
-                can see live in this link
-              </p>
-            </div>
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https://yasamangandomkar.ir/restauran"
-            target="_blank"
-            className="overlay"
-          >
-            <div className="detail">
-              <p>
-                Implement by HTML ,CSS ,reactjs.This project has been
-                implemented in a responsive design. you can see live in this
-                link
-              </p>
-            </div>
-            <img src={Restauran} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https://yasamangandomkar.ir/gym"
-            target="_blank"
-            className="overlay"
-          >
-            <img src={Gym} alt="" />
-            <div className="detail">
-              <p>
-                please turn on vpn for visit this website . Implement by HTML
-                ,CSS ,reactjs.This project has been implemented in a responsive
-                design.in this project I used rapid api .
-              </p>
-            </div>
-          </a>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <a
-            href="https://yasamangandomkar.ir/shop"
-            target="_blank"
-            className="overlay"
-          >
-            <img src={Shop} alt="" />
-            <div className="detail">
-              <p>
-                This app is like a simple online shopping cart which you can add
-                and remove item.implement by HTML ,CSS,reactjs.in this project I
-                used redux for state management.you can see live in this link
-              </p>
-            </div>
-          </a>
-        </SwiperSlide>
+        {data.map((item, index) => (
+          <SwiperSlide className="slide">
+            <a key={index} className="overlay" href={item.url} target="_blank">
+              <img src={item.img} alt="" />
+              <div className="detail">
+                <p>{item.title}</p>
+              </div>
+            </a>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
